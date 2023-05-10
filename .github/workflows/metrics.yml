@@ -9,12 +9,12 @@ on:
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+#     permissions:
+#       contents: write
     steps:
       - uses: crovo77/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN }}
-#           plugin_languages: yes
-#           plugin_languages_ignored: >-
-#             cmake, makefile
+          plugin_languages: yes
+          plugin_languages_ignored: >-
+            cmake, makefile
